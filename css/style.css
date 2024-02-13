@@ -1,0 +1,920 @@
+/* ------------ GOOGLE FONTS ------------ */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap');
+
+/* ------------ CUSTOM PROPERTIES ------------ */
+:root{
+    /* FONT */
+    --fontLobster: 'Lobster', sans-serif;
+    --fontNunito: 'Nunito Sans', sans-serif;
+
+    /* COLORS */
+    --White: #F6F6F9;
+    --PrimaryColor: #181335;
+    --SecondaryColor: #FFE037;
+    --TertiaryLightBlue: #4C7CF8;
+    --TertiraryGreen: #1DCD9F;
+    --TertiaryPink: #F63A99;
+    --VariantColor: #8090E7;
+}
+
+/* ------------ ASSEGNAZIONE FONTS E COLORI------------ */
+
+html {
+    font-family: var(--fontNunito);
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: var(--fontLobster);
+}
+
+h1, h2, h3, h4, h5, p, li, a{
+    color: var(--White);
+}
+
+h1 {
+    font-size: clamp(2.133rem, 4vw + 1rem, 4.267rem);
+    letter-spacing: 0.12rem;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size: clamp(1.75rem, 2vw + 1rem, 2.5rem);
+    letter-spacing: 0.075rem;
+}
+
+h3, h4 {
+    font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+    letter-spacing: 0.06rem;
+}
+
+h4 {
+    font-family: var(--fontNunito);
+}
+
+h5 {
+    font-weight: normal;
+}
+
+p, .menu_footer {
+    font-size: clamp(0.875rem, 1vw + 1rem, 1.1rem);
+}
+
+p {
+    letter-spacing: 0.00875rem;
+}
+
+.menu_footer {
+    font-weight: 400;
+    color: var(--White);
+}
+
+.small_copy {
+    font-size: clamp(0.5rem, 2vw + 1rem, 1rem);
+}
+
+a.small_copy:hover {
+    text-decoration: underline;
+}
+
+/*Si è deciso di assegnare il bold attraverso una classe e non con i tag <b> o <strong>
+ per poter rendere più versatile e mantenibile il codice nel caso in cui avessimo deciso di modificare
+ anche altre proprietà associate ai testi in grassetto*/
+.strong_copy {
+    font-weight: bold;
+}
+
+body {
+    background: var(--PrimaryColor);
+}
+
+/*Icone social presenti nel footer*/
+.fa-brands {
+    color: var(--White);
+}
+
+/* ------------ CTA ------------ */
+
+button {
+    color: var(--PrimaryColor);
+    background: var(--SecondaryColor);
+    padding: 1.25rem 3.125rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-flex;
+    border: none;
+}
+
+button:hover, button:active {
+    background: var(--VariantColor);
+}
+
+/* ------------ HEADER ------------ */
+
+header{
+    background-image: url("../img/Clouds_reduced.png");
+    background-position: center bottom;
+    background-size: cover;
+    height: fit-content;
+    position: relative;
+}
+
+#brand_name {
+    text-align: center;
+    z-index: 1;
+}
+
+#logo {
+    position: relative;
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 0;
+    margin-inline: auto;
+}
+
+/* ------------ HEADER PARALLAX ------------ */
+/*Solo nella Homepage del sito si ha un effetto parallasse, con una Hero più ampia che comprene anche uno slogan e una CTA*/
+
+#header_parallax {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header_parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#header_parallax #logo{
+    position: relative;
+    max-width: 8em;
+    max-height: 8em;
+    z-index: 1;
+    display: block;
+    margin: 0;
+}
+
+#header_parallax #brand_name {
+    position: relative;
+    text-align: center;
+}
+
+#slogan {
+    position: relative;
+    text-align: center;
+}
+
+#button_hero{
+    position: relative;
+    display: block;
+    z-index: 2;
+}
+
+#cloud{
+    z-index: 3;
+    margin-top: 5%;
+}
+
+/* ------------ HEADER PAGINE SINGLE BOUNDLE ------------ */
+/*Nelle pagine sei singoli pacchetti si è deciso di rimuovere l'immagine della hero,
+sostituendola con l'svg già utilizzato in altre pagine del sito e assegnando allo stesso il colore identificativo del pacchetto,
+per portare completamente il focus dell'utente sul servizio proposto*/
+
+.color_wave_upsidedown {
+    background-image: none;
+    background-color: var(--TertiaryLightBlue);
+    mask-image: url("../img/svg/Wave_upside_down.svg");
+    mask-position: center bottom;
+    mask-size: cover;
+    fill: var(--TertiaryPink);
+    position: relative;
+    height: 30em;
+}
+
+#adventure_boundle .color_wave_upsidedown {
+    background-color: var(--TertiraryGreen);
+}
+
+#creativity_boundle .color_wave_upsidedown {
+    background-color: var(--TertiaryPink);
+}
+
+#relax_boundle main, #adventure_boundle main, #creativity_boundle main  {
+    margin-top: -15%;
+}
+
+/*Per gestire l'effetto di sovrapposizione tra il pacchetto e l'svg è stato necessario creare una media query per gestire
+lo spacing su risoluzioni diverse*/
+
+@media only screen and (min-width: 768px) {
+    .color_wave_upsidedown {
+        height: 35em;
+    }
+
+    #relax_boundle main, #adventure_boundle main, #creativity_boundle main  {
+        margin-top: -8%;
+    }
+}
+
+/* ------------ NAVBAR ------------ */
+
+.navbar-toggler .fa-bars, .navbar a.dropdown-toggle, .navbar .nav-link.active {
+    color: var(--White); /* Colore per l'icona hamburger menu */
+}
+
+/* utile per rimuovere il colore di sfondo del bottone close della barra mobile quando tieni premuto*/
+.btn-close-white:hover {
+    background-color: transparent;
+}
+/* utile per rimuovere il colore di sfondo del bottone hamburger della barra mobile quando tieni premuto*/
+.navbar-toggler:hover {
+    background-color: transparent;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar a.dropdown-menu {
+    background: var(--White);
+}
+
+.navbar a.dropdown-item {
+    background-color: transparent;
+    color: #0c0725;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    padding: 8px;
+}
+
+.navbar .dropdown-menu a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--PrimaryColor);
+    transition: width 0.3s ease;
+}
+
+.navbar .dropdown-menu a:hover::before,
+.navbar .dropdown-menu a:focus::before {
+    width: 100%;
+    color: #0c0725;
+}
+
+.navbar a.dropdown-item:hover,
+.navbar a.dropdown-item:focus {
+    background-color: transparent;
+    color: var(--PrimaryColor);
+}
+
+.nav-item a{
+    color: var(--White);
+    position: relative;
+    display: inline-block;
+}
+
+.nav-item a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--White);
+    transition: width 0.3s ease; /* Imposta la transizione */
+}
+
+#navbarDropdownMenuLink:focus{
+    color: var(--White);
+}
+
+.navbar .nav-item a.active::before,
+.nav-item a:focus::before,
+.nav-item a:hover::before {
+    width: 100%; /* Fai espandere la sottolineatura al 100% */
+}
+
+.nav-item a:focus {
+    text-underline-offset: 10px;
+}
+
+.nav-item a:hover {
+    color: var(--White);
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Larghezza della barra */
+}
+
+.nav-item{
+    color: var(--White);
+}
+
+.navbar-nav .nav-link-show{
+    color: var(--White);
+}
+
+.navbar-toggler{
+    border: none;
+    outline: none;
+}
+
+.nav-colored{
+    background: var(--PrimaryColor);
+    transition: background-color 0.7s ease;
+}
+
+.nav-transparent{
+    background: -moz-linear-gradient(to right,  rgba(12,7,37,1) 0%, rgba(0,0,0,0) 50%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(to right,  rgba(12,7,37,1) 0%,rgba(0,0,0,0) 50%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(12,7,37,1) 0%,rgba(0,0,0,0) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    transition: background-color 0.7s ease;
+}
+
+.navbar.collapsing .navbar-nav,
+.navbar.show .navbar-nav{
+    background: -moz-linear-gradient(to top,  rgba(12,7,37,1) 0%, rgba(0,0,0,0) 50%);
+    padding: 12px;
+}
+
+#offcanvasNavbar{
+    background-color: var(--PrimaryColor);
+    text-align: center;
+}
+
+/* ----------- IMG GROW ON HOVER------------ */
+
+/* Media query per far sì che all'hover da desktop le immagini a cui è applicata la classe img-grow si ingrandiscano*/
+@media(hover: hover) and (pointer: fine) and (min-width: 1200px) {
+    .img-grow:hover{
+        transform: scale(1.1);
+        transition: transform 0.5s ease;
+    }
+
+    .img-grow:not(:hover){
+        transform: scale(1);
+        transition: transform 0.5s ease;
+    }
+}
+
+/* ----------- ONDA SVG ------------ */
+.white-wave{
+    background-image: url("../img/svg/White_wave.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#reviews .white-wave {
+    background-image: url("../img/svg/Wave.svg");
+}
+
+.white-wave .row {
+    padding-top: 30%;
+    padding-bottom: 5%;
+}
+
+.white-wave h2, .white-wave p{
+    color: var(--PrimaryColor);
+}
+
+.color_wave {
+    mask: url("/img/svg/White_wave.svg");
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    z-index:0;
+}
+
+.color_wave .row {
+    padding-top: 70%;
+}
+
+/*Media query per riposizionare gli elementi della pagina rispetto all'onda ed evitare effetti di mascheramento*/
+@media only screen and (min-width:576px) {
+    .color_wave .row {
+        padding-top: 10%;
+    }
+
+    .white-wave .row {
+        padding-top: 7%;
+        padding-bottom: 5%;
+    }
+}
+
+#relax_boundle .color_wave {
+    background-color: var(--TertiaryLightBlue);
+}
+
+#adventure_boundle .color_wave {
+    background-color: var(--TertiraryGreen);
+}
+
+#creativity_boundle .color_wave {
+    background-color: var(--TertiaryPink);
+}
+
+/* ------------ BRAND CARD (vision e mission) ------------ */
+
+.brand-card{
+    border-radius: 2em;
+    background-color: #352688;;
+    padding: 2rem;
+    border-right: 0.5em solid #FFE037;
+    border-bottom: 0.5em solid #FFE037;
+}
+
+/* ------------ PRIZE CARD ------------ */
+
+.prize-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: fit-content;
+    object-fit: cover;
+}
+
+/* ------------ TRAVEL BOUNDLE AND SINGLE PAGE ------------ */
+/*Si è cercato di ottimizzare il css e utilizzare le stesse classi in pagine diverse per proporre strutture simili tra loro,
+date da un'immagine e un box di testo che si sovrappongono tra loro*/
+
+.travel_boundle {
+    background: var(--White);
+    padding: 15% 5% 5% 5%;
+    border-radius: 1.25rem;
+    border: 0.3em solid;
+    margin-top: -10%;
+    z-index:0;
+}
+
+.travel_boundle p, .travel_boundle h3 {
+    color: var(--PrimaryColor);
+}
+
+.boundle_img {
+    z-index: 1;
+}
+
+#relax_boundle, #adventure_boundle, #creativity_boundle {
+    background-color: var(--White);
+}
+
+.single_boundle main p{
+    color: var(--PrimaryColor);
+}
+
+.single_boundle .boundle_img {
+    z-index: 0;
+}
+
+.single_boundle .travel_boundle {
+    z-index: 1;
+    padding: 5%;
+    border:none;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.guide_card_boundle .travel_boundle {
+    z-index: 0;
+    padding-top: 15%;
+}
+
+.guide_card_boundle .boundle_img {
+    z-index: 1;
+}
+
+#relax .travel_boundle {
+    border-color: var(--TertiaryLightBlue);
+}
+
+#adventure .travel_boundle {
+    border-color: var(--TertiraryGreen);
+}
+
+#creativity .travel_boundle {
+    border-color: var(--TertiaryPink);
+}
+
+/*Da mobile l'immagine appare sopra al box di test ed è in primo piano,
+ mentre da desktop l'immagine si affianca al box e passa in secondo piano*/
+
+@media only screen and (min-width: 1200px) {
+
+    .travel_boundle {
+        z-index: 1;
+        padding-top: 5%;
+        margin-left: -15%;
+        margin-top: 0;
+        border-top: none;
+        border-left: none;
+    }
+
+    .boundle_img {
+        position: relative;
+        right: 0;
+        z-index: 0;
+        margin-left: -15%;
+    }
+
+    .boundle_img img{
+        width: auto;
+        height: 100%;
+    }
+
+    #adventure .travel_boundle {
+        margin-left: 0;
+        margin-right: -10%;
+        border-top: none;
+        border-right: none;
+        border-left: 0.3em solid var(--TertiraryGreen);
+    }
+
+    .single_boundle #adventure .travel_boundle {
+        border:none;
+        margin-left: -10%;
+    }
+
+    #relax, #creativity, #adventure {
+        padding-left: 8%;
+    }
+
+    .guide_card_boundle .travel_boundle {
+        margin-left: 0;
+        margin-right: -10%;
+        padding-top: 5%;
+        padding-right: 15%;
+    }
+}
+
+/* ----------- CREATE A PERSONAL BOUNDLE ------------ */
+
+.personal_boundle {
+    background-color: white;
+    padding: 2em;
+    border-radius: 1em;
+    border: .3rem solid var(--TertiaryLightBlue);
+}
+
+#adventure_form {
+    border-color: var(--TertiraryGreen);
+}
+
+#creativity_form {
+    border-color: var(--TertiaryPink);
+}
+
+form h5 {
+    color: var(--PrimaryColor);
+}
+
+/* ----------- FORM GET IN TOUCH ------------ */
+
+#get_in_touch h2 {
+    color: var(--PrimaryColor);
+}
+
+#get_in_touch .travel_boundle {
+    padding: 8% 8% 20% 8%;
+    margin-top: 0;
+    z-index: 0;
+}
+
+/*Media query per gestire la diversa disposizione degli elementi su tabelt e desktop*/
+/*Su mobile, l'img del razzo viene posizionato al di sotto del box di testo
+Su tablet, il razzo affianca il testo, mentre il form rimane posizionato sotto
+Su desktop tutti e tre gli elementi (img, box testo e form) vengono posizionati sulla stessa riga
+ */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #get_in_touch .travel_boundle {
+        padding: 8% 8% 8% 20%;
+        margin-left: -35%;
+    }
+
+    #get_in_touch img {
+        margin-left: -60%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #get_in_touch .travel_boundle {
+        padding: 8% 8% 8% 20%;
+        margin-left: -20%;
+    }
+}
+
+#get_in_touch img{
+    position: relative;
+    z-index: 1;
+    margin-top: -25%;
+}
+
+
+#get_in_touch form {
+    background-color: var(--VariantColor);
+    border-radius: .8em;
+    z-index: 2;
+}
+
+input[type=text], select {
+    border-radius: .3rem;
+    border: none;
+    padding-left: .5em;
+    height: 1.7rem;
+}
+
+input[type=text] {
+    font-size: clamp(0.3rem, 2vw + 1rem, .7rem);
+}
+
+input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+#get_in_touch label {
+    font-size: clamp(0.875rem, 1vw + 1rem, 1rem);
+}
+
+#get_in_touch button:hover {
+    background-color: var(--White);
+}
+
+@media only screen and (min-width: 1200px) {
+    #get_in_touch form {
+        position: relative;
+        margin-left: -35%;
+        z-index: 2;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    #get_in_touch form {
+        margin-left: -65%;
+    }
+}
+
+/* ------------ Effetto fade out per sostituzione elementi in html ------------ */
+#mainContainer {
+    transition: opacity 0.5s ease-out;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ------------ GUIDE CARD ------------ */
+
+.swiper{
+    height: 100%;
+}
+
+.swiper-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.testimonials-wrapper{
+    height: 30em;
+ }
+
+.guide-wrapper{
+    height: 35em;
+}
+
+.image-wrapper{
+    height: auto;
+}
+
+.card{
+    padding: 2em 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.guide-card{
+    width: 20em;
+    height: 31em;
+    border-radius: 2em;
+    background-color: var(--White);
+    box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+    padding: 1.5rem;
+
+}
+
+.guide-card img{
+    border-radius: 10%;
+    object-fit: cover;
+    width: 12em;
+    height: 12em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.guide-card p{
+    margin: 1em 0;
+    color: var(--PrimaryColor);
+}
+
+#card_Zyrak {
+    border-right: .3rem solid var(--TertiaryLightBlue);
+    border-bottom: .3rem solid var(--TertiaryLightBlue);
+}
+
+#card_Lumara {
+    border-right: .3rem solid var(--TertiaryPink);
+    border-bottom: .3rem solid var(--TertiaryPink);
+}
+
+#card_Calysa {
+    border-right: .3rem solid var(--TertiraryGreen);
+    border-bottom: .3rem solid var(--TertiraryGreen);
+}
+
+/* ------------ TESTIMONIAL CARD ------------ */
+
+.testimonials-card{
+    width: 20em;
+    height: fit-content;
+    border-radius: 1.5em;
+    background-color: #352688;
+}
+
+.testimonials-card img{
+    width: 2.3rem;
+    height: auto;
+}
+
+.testimonials-card img:not(:last-child){
+    margin-right: 6px;
+}
+
+.testimonials-card .name{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--White);
+    margin-top: 1.2em;
+}
+
+.testimonials-card p{
+    text-align: center;
+    margin-top: 20px;
+    color: var(--White);
+    font-size: 0.85rem;
+    max-width: 90%;
+}
+
+/* ------------ IMAGE CARD ------------ */
+
+.image-carousel{
+    max-width: 90em;
+}
+.image-card{
+    display: block;
+    width: 50%;
+    height: fit-content;
+    object-fit: cover;
+}
+
+.guide-pagination .swiper-pagination-bullet {
+    opacity: 1;
+    border: var(--White) solid 1px;
+    background-color: transparent;
+    height: 12px;
+    width: 12px;
+}
+.guide-pagination .swiper-pagination-bullet-active {
+    background-color: var(--White);
+}
+
+.testimonials-pagination .swiper-pagination-bullet {
+    opacity: 1;
+    border: var(--PrimaryColor) solid 1px;
+    background-color: transparent;
+    height: 12px;
+    width: 12px;
+}
+.testimonials-pagination .swiper-pagination-bullet-active {
+    background-color: var(--PrimaryColor);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: var(--White);
+    padding: 1.875rem 1.875rem;
+    border-radius: 100%;
+    border: 2px solid var(--PrimaryColor);
+    color: var(--PrimaryColor);
+}
+
+/* fix the buttons positions */
+.swiper-button-prev {
+    left: 0;
+    background-image: url("../img/svg/nav-arrow-left.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+
+.swiper-button-next {
+    right: 0;
+    background-image: url("../img/svg/nav-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+
+/* Modifica la posizione quando la larghezza della finestra supera 1200px */
+@media (min-width: 1200px) {
+    .testimonials-button-prev{
+        left: calc((100vw - 1200px) / 2);
+    }
+
+    .testimonials-button-next {
+        right: calc((100vw - 1200px) / 2);
+    }
+}
+
+/* Modifica la posizione quando la larghezza della finestra supera 1200px */
+@media (min-width: 960px) {
+
+    .guide-button-prev{
+        left: calc((100vw - 960px) / 2);
+    }
+
+    .guide-button-next {
+        right: calc((100vw - 960px) / 2);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .testimonials-button-prev {
+        padding: 1.4rem 1.4rem;
+        transition: padding 0.5s ease-in-out;
+    }
+
+    .testimonials-button-next {
+        padding: 1.4rem 1.4rem;
+        transition: padding 0.5s ease-in-out;
+    }
+
+    .guide-button-prev {
+        padding: 1.4rem 1.4rem;
+        transition: padding 0.5s ease-in-out;
+    }
+
+    .guide-button-next {
+        padding: 1.4rem 1.4rem;
+        transition: padding 0.5s ease-in-out;
+    }
+}
+
+@media (max-width: 992px) {
+    .image-navigation-button {
+        display: none;
+    }
+}
+
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-prev::after {
+    display: none;
+}
+
+/* ------------ FOOTER ------------ */
+footer {
+    background: #0C0922;
+}
+
+footer img{
+    width: 4.5em;
+    height: 4.5em;
+}
+
+
+
