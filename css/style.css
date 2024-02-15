@@ -1,15 +1,15 @@
 /* ------------ GOOGLE FONTS ------------ */
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@500&display=swap');
 
 /* ------------ CUSTOM PROPERTIES ------------ */
 :root{
     /* FONT */
-    --fontLobster: 'Lobster', sans-serif;
-    --fontNunito: 'Nunito Sans', sans-serif;
+    --fontLobster: 'Playfair Display', sans-serif;
+    --fontNunito: 'Playfair Display', sans-serif;
 
     /* COLORS */
-    --White: #F6F6F9;
-    --PrimaryColor: #181335;
+    --White: #EEEDE7;
+    --PrimaryColor: #728878;
     --SecondaryColor: #FFE037;
     --TertiaryLightBlue: #4C7CF8;
     --TertiraryGreen: #1DCD9F;
@@ -29,13 +29,16 @@ a{
 
 h1, h2, h3 {
     font-family: var(--fontLobster);
+
 }
 
-h1, h2, h3, h4, h5, p, li, a{
-    color: var(--White);
+h2, h3, h4, h5, p, li, a{
+    color: var(--PrimaryColor);
 }
 
 h1 {
+    color: white;
+    font-weight: bold;
     font-size: clamp(2.133rem, 4vw + 1rem, 4.267rem);
     letter-spacing: 0.12rem;
     text-transform: capitalize;
@@ -88,7 +91,7 @@ a.small_copy:hover {
 }
 
 body {
-    background: var(--PrimaryColor);
+    background: var(--White);
 }
 
 /*Icone social presenti nel footer*/
@@ -238,6 +241,11 @@ lo spacing su risoluzioni diverse*/
     color: var(--White); /* Colore per l'icona hamburger menu */
 }
 
+.navbar-toggler .fa-bars, .navbar a.dropdown-toggle.colroed, .navbar .nav-link.active.colored {
+    color: var(--PrimaryColor); /* Colore per l'icona hamburger menu */
+}
+
+
 /* utile per rimuovere il colore di sfondo del bottone close della barra mobile quando tieni premuto*/
 .btn-close-white:hover {
     background-color: transparent;
@@ -293,6 +301,10 @@ lo spacing su risoluzioni diverse*/
     display: inline-block;
 }
 
+.nav-item a.colored {
+    color: var(--PrimaryColor);
+}
+
 .nav-item a::before {
     content: "";
     position: absolute;
@@ -304,9 +316,25 @@ lo spacing su risoluzioni diverse*/
     transition: width 0.3s ease; /* Imposta la transizione */
 }
 
+.nav-item a.colored::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--PrimaryColor);
+    transition: width 0.3s ease; /* Imposta la transizione */
+}
+
 #navbarDropdownMenuLink:focus{
     color: var(--White);
 }
+
+#navbarDropdownMenuLink:focus.colored{
+    color: var(--PrimaryColor);
+}
+
 
 .navbar .nav-item a.active::before,
 .nav-item a:focus::before,
@@ -320,6 +348,11 @@ lo spacing su risoluzioni diverse*/
 
 .nav-item a:hover {
     color: var(--White);
+}
+
+/* Gestione del colore con l'hover */
+.nav-item a.colored:hover{
+    color: var(--PrimaryColor);
 }
 
 .navbar-nav {
@@ -336,6 +369,14 @@ lo spacing su risoluzioni diverse*/
     color: var(--White);
 }
 
+.nav-item-colored{
+    color: var(--PrimaryColor);
+}
+
+.navbar-nav .nav-link-show-colored{
+    color: var(--PrimaryColor);
+}
+
 .navbar-toggler{
     border: none;
     outline: none;
@@ -347,11 +388,9 @@ lo spacing su risoluzioni diverse*/
 }
 
 .nav-transparent{
-    background: -moz-linear-gradient(to right,  rgba(12,7,37,1) 0%, rgba(0,0,0,0) 50%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(to right,  rgba(12,7,37,1) 0%,rgba(0,0,0,0) 50%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right,  rgba(12,7,37,1) 0%,rgba(0,0,0,0) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    background-color: rgba(238, 222, 231, 0.9); /* Colore di sfondo con trasparenza */
     transition: background-color 0.7s ease;
+
 }
 
 .navbar.collapsing .navbar-nav,

@@ -1,14 +1,39 @@
 <!-- Script per navbar (cambio colore)-->
 
-$(document).ready(function (){
-    $(window).scroll(function () {
-        if($(document).scrollTop() > 200) {
-            $(".navbar").removeClass("nav-transparent").addClass("nav-colored");
-        }else{
-            $(".navbar").removeClass("nav-colored").addClass("nav-transparent");
+$(document).ready(function () {
+    function updateNavbar() {
+        if ($(window).width() < 768) { // Mobile
+            $(".nav-item a").removeClass('colored');
         }
+
+        if ($(document).scrollTop() > 200) {
+            $(".navbar").removeClass("nav-transparent").addClass("nav-colored");
+            if ($(window).width() >= 768) { // Mobile
+                $(".nav-item a").removeClass('colored');
+            }
+        } else {
+            $(".navbar").removeClass("nav-colored").addClass("nav-transparent");
+            if ($(window).width() >= 768) { // Mobile
+                $(".nav-item a").addClass('colored');
+            }
+        }
+    }
+
+    // Chiamata iniziale per impostare la classe in base alla posizione iniziale della pagina
+    updateNavbar();
+
+    // Aggiungi l'evento di scroll
+    $(window).scroll(function () {
+        updateNavbar();
+    });
+
+    // Aggiungi l'evento di ridimensionamento della finestra
+    $(window).resize(function () {
+        updateNavbar();
     });
 });
+
+
 
 
 <!-- Script per animazione di chiusura del menù in MOBILE -->
