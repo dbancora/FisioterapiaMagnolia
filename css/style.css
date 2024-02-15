@@ -41,12 +41,19 @@ h1 {
     font-weight: bold;
     font-size: clamp(2.133rem, 4vw + 1rem, 4.267rem);
     letter-spacing: 0.12rem;
-    text-transform: capitalize;
+}
+
+h1.colored{
+    color: var(--PrimaryColor);
 }
 
 h2 {
     font-size: clamp(1.75rem, 2vw + 1rem, 2.5rem);
     letter-spacing: 0.075rem;
+}
+
+h2.bold{
+    font-weight: bold;
 }
 
 h3, h4 {
@@ -472,6 +479,19 @@ lo spacing su risoluzioni diverse*/
 
 #creativity_boundle .color_wave {
     background-color: var(--TertiaryPink);
+}
+
+
+/* ------------ SERVICE CARD ----------*/
+.service-card{
+    width: auto;
+    height: auto;
+}
+
+.service-card .img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
 }
 
 /* ------------ BRAND CARD (vision e mission) ------------ */
@@ -947,7 +967,7 @@ input[type=text]:focus, .form-container input[type=password]:focus {
 
 /* ------------ FOOTER ------------ */
 footer {
-    background: #0C0922;
+    background: var(--PrimaryColor);
 }
 
 footer img{
