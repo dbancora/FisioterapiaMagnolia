@@ -8,11 +8,13 @@ $(document).ready(function () {
 
         if ($(document).scrollTop() > 200) {
             $(".navbar").removeClass("nav-transparent").addClass("nav-colored");
+            $(".fa-bars").removeClass("colored");
             if ($(window).width() >= 768) { // Mobile
                 $(".nav-item a").removeClass('colored');
             }
         } else {
             $(".navbar").removeClass("nav-colored").addClass("nav-transparent");
+            $(".fa-bars").addClass("colored");
             if ($(window).width() >= 768) { // Mobile
                 $(".nav-item a").addClass('colored');
             }

@@ -241,7 +241,7 @@ lo spacing su risoluzioni diverse*/
     color: var(--White); /* Colore per l'icona hamburger menu */
 }
 
-.navbar-toggler .fa-bars, .navbar a.dropdown-toggle.colroed, .navbar .nav-link.active.colored {
+.navbar-toggler .fa-bars.colored, .navbar a.dropdown-toggle.colroed, .navbar .nav-link.active.colored {
     color: var(--PrimaryColor); /* Colore per l'icona hamburger menu */
 }
 
