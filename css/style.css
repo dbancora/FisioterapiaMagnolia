@@ -1,11 +1,13 @@
 /* ------------ GOOGLE FONTS ------------ */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@500&display=swap');
 
 /* ------------ CUSTOM PROPERTIES ------------ */
 :root{
     /* FONT */
     --fontLobster: 'Playfair Display', sans-serif;
     --fontNunito: 'Playfair Display', sans-serif;
+    --fontMontserrat : 'Montserrat Display', sans-serif;
 
     /* COLORS */
     --White: #EEEDE7;
@@ -53,6 +55,11 @@ h2 {
 }
 
 h2.bold{
+    font-weight: bold;
+}
+
+h2.montserrat{
+    font-family: var(--fontMontserrat);
     font-weight: bold;
 }
 
@@ -492,6 +499,22 @@ lo spacing su risoluzioni diverse*/
     height: 100%;
     width: 100%;
     object-fit: fill;
+}
+
+.button-card {
+    background-color: rgba(255, 255, 255, 0.3); /* Nero trasparente al 50% */
+    color: white; /* Colore del testo bianco */
+    border: none; /* Rimuove il bordo predefinito */
+    padding: 15px 32px; /* Spazio intorno al testo */
+    text-align: center; /* Allinea il testo al centro */
+    text-decoration: none; /* Rimuove il sottolineato */
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px; /* Angoli arrotondati */
+}
+
+.button-card:hover {
+    background-color: var(--PrimaryColor); /* Nero trasparente all'80% al passaggio del mouse */
 }
 
 /* ------------ BRAND CARD (vision e mission) ------------ */
