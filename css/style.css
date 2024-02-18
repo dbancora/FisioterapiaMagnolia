@@ -514,8 +514,19 @@ lo spacing su risoluzioni diverse*/
 }
 
 .button-card:hover {
-    background-color: var(--PrimaryColor); /* Nero trasparente all'80% al passaggio del mouse */
+    background-color: var(--PrimaryColor);
 }
+
+.button-card:hover::before,
+.button-card:hover::after {
+    content: ''; /* Contenuto vuoto per rendere gli pseudo-elementi visibili */
+    background-color: var(--PrimaryColor);
+    /* Altre proprietà CSS a piacere per personalizzare gli pseudo-elementi */
+}
+
+.button-card:active {
+     color: var(--PrimaryColor);
+ }
 
 /* ------------ BRAND CARD (vision e mission) ------------ */
 
