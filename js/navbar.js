@@ -2,20 +2,20 @@
 
 $(document).ready(function () {
     function updateNavbar() {
-        if ($(window).width() < 768) { // Mobile
+        if ($(window).width() < 993) { // Mobile
             $(".nav-item a").removeClass('colored');
         }
 
         if ($(document).scrollTop() > 200) {
             $(".navbar").removeClass("nav-transparent").addClass("nav-colored");
             $(".fa-bars").removeClass("colored");
-            if ($(window).width() >= 768) { // Mobile
+            if ($(window).width() >= 975) { // Mobile
                 $(".nav-item a").removeClass('colored');
             }
         } else {
             $(".navbar").removeClass("nav-colored").addClass("nav-transparent");
             $(".fa-bars").addClass("colored");
-            if ($(window).width() >= 768) { // Mobile
+            if ($(window).width() >= 975) { // Mobile
                 $(".nav-item a").addClass('colored');
             }
         }
