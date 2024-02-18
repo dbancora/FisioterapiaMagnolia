@@ -38,6 +38,10 @@ h2, h3, h4, h5, p, li, a{
     color: var(--PrimaryColor);
 }
 
+p.white{
+    color: var(--White);
+}
+
 h1 {
     color: white;
     font-weight: bold;
@@ -47,6 +51,10 @@ h1 {
 
 h1.colored{
     color: var(--PrimaryColor);
+}
+
+h3.blank{
+    color: var(--White);
 }
 
 h2 {
