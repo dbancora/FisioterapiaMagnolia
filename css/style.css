@@ -89,6 +89,18 @@ h5 {
     font-weight: normal;
 }
 
+h5.white{
+    color: var(--White);
+}
+
+h5.montserrat{
+    font-family: var(--White);
+}
+
+h5.small{
+    font-size: 12px;
+}
+
 p, .menu_footer {
     font-size: clamp(0.875rem, 1vw + 1rem, 1.1rem);
 }
