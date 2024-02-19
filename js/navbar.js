@@ -1,6 +1,8 @@
 <!-- Script per navbar (cambio colore)-->
 
 $(document).ready(function () {
+
+    var svgElement = document.getElementById('navbar-logo');
     function updateNavbar() {
         if ($(window).width() < 993) { // Mobile
             $(".nav-item a").removeClass('colored');
@@ -9,12 +11,15 @@ $(document).ready(function () {
         if ($(document).scrollTop() > 200) {
             $(".navbar").removeClass("nav-transparent").addClass("nav-colored");
             $(".fa-bars").removeClass("colored");
+            $('#navbar-scritta').addClass("white");
+            svgElement.style.fill = '#FFFFFF';
             if ($(window).width() >= 975) { // Mobile
                 $(".nav-item a").removeClass('colored');
             }
         } else {
             $(".navbar").removeClass("nav-colored").addClass("nav-transparent");
             $(".fa-bars").addClass("colored");
+            $('#navbar-scritta').removeClass("white");
             if ($(window).width() >= 975) { // Mobile
                 $(".nav-item a").addClass('colored');
             }
