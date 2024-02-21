@@ -33,15 +33,18 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <nav class="navbar navbar-expand-lg fixed-top nav-transparent">
 
-            <div class="container-fluid p-2 align-items-center text-center">
-                <div class="navbar-header d-flex align-items-center text-center">
+            <div class="container-fluid p-2">
+                <div class="navbar-header d-flex justify-content-center text-center">
                     <img id="navbar-logo" src="img/svg/LogoNav1.svg" alt="Logo" class="mt-3 mt-lg-3 ms-3" style="height: auto; width: auto;">
-                    <p class="mx-lg-5 ms-5 my-0" id="navbar-scritta">Fisioterapia Magnolia</p>
+
                 </div>
-                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle Navigation" aria-expanded="false" >
-                    <i class="fas fa-bars colored"></i>
-                </button>
-                <div class="offcanvas offcanvas-top h-100" tabindex="-1" id="offcanvasNavbar">
+                <p class="mx-lg-5 ms-5 my-0" id="navbar-scritta">Fisioterapia Magnolia</p>
+                <div class="d-flex justify-content-end">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle Navigation" aria-expanded="false" >
+                        <i class="fas fa-bars colored"></i>
+                    </button>
+                </div>
+                <div class="offcanvas offcanvas-top h-100" tabindex="-1" id="offcanvasNavbar" style="width: auto;">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title"></h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -52,10 +55,10 @@
                                 <a class="nav-link active colored" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item mx-3">
-                                <a class="nav-link colored" href="1_ourStory.html">Trattamenti</a>
+                                <a class="nav-link colored" href="#">Trattamenti</a>
                             </li>
                             <li class="nav-item mx-3">
-                                <a class="nav-link colored" href="2_feelTheMagic.html">Contatti</a>
+                                <a class="nav-link colored" href="#">Contatti</a>
                             </li>
                         </ul>
                     </div>
@@ -82,7 +85,7 @@
     <section class="mt-5 pt-5">
         <!--TEXT INTRO-->
         <div class="container-fluid">
-            <div class="row px-2 px-md-5 mb-5 mt-lg-5 text-center ">
+            <div class="row px-2 px-md-5 mb-5 mt-lg-5 text-center">
                 <div class="col-12 col-xl-12 py-2">
                     <h3 >Benvenuto presso Fisioterapia Magnolia, il luogo dove il tuo benessere è la priorità! <br class="d-sm-block d-md-none"></h3>
                 </div>
@@ -174,6 +177,42 @@
                 </div>
             </div>
         </div>
+
+        <div class="container-fluid justify-content-start mt-3">
+            <div class="row ps-lg-5 ms-lg-5 mb-5">
+                <div class="col-lg-1">
+
+                </div>
+                <div class="col-12 col-lg-5 ps-lg-0 ms-lg-0 me-lg-0 text-center text-lg-start">
+                    <h2 class="bold mb-5">Contatti</h2>
+                    <h4>Guglielmo Spini</h4>
+                    <p class="montserrat mb-5">DOTTORE IN FISIOTERAPIA</p>
+
+                    <p class="montserrat black bold mb-0">Cellulare</p>
+                    <p class="montserrat black mb-3">3335211918</p>
+
+                    <p class="montserrat black bold mt-4 mb-0">Indirizzo</p>
+                    <p class="montserrat black mb-3">fisioterapia.magnolia@gmail.com</p>
+
+                    <p class="montserrat black bold mt-4 mb-0">Mail</p>
+                    <p class="montserrat black mb-3">Via Piemonte, 1, 22074, Lomazzo (CO)</p>
+
+                    <p class="montserrat black bold mt-3 pt-5 mb-0">Per prenotare un appuntamento si prega di telefonare. </p>
+
+
+                    <p class="montserrat black mt-1 mb-0">Qualora necessario la terapia potrà essere svolta anche a domicilio.</p>
+
+                </div>
+                <div class="col-12 col-lg-5 ps-lg-0 ms-lg-0 me-lg-5 text-center text-lg-end">
+                    <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3426.108141644004!2d9.03009857671281!3d45.703610817432455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47869a7eac6b8bb1%3A0x856c9c783f114d4a!2sFisioterapia%20Magnolia!5e1!3m2!1sit!2sit!4v1708512786506!5m2!1sit!2sit" width="530px" height="530px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
     </section>
 
     <!--LINK OTHER PAGES-->
@@ -200,13 +239,13 @@
             </div>
             <div class="col-12 col-lg-6 justify-content-center mb-0">
                 <div class="row justify-content-center text-center justify-content-lg-start text-lg-start mb-1 ms-lg-5">
-                    <div class="col-11 justify-content-center justify-content-lg-start ms-2 mt-4 p-0 mb-0">
+                    <div class="col-11 justify-content-center justify-content-lg-start ms-lg-2 mt-4 p-0 mb-0">
                         <h4 class="white mb-0 mt-1">Guglielmo Spini</h4>
                         <h5 class="white montserrat small mt-0 mb-0" style="display: inline-block;">DOTTORE IN FISIOTERAPIA</h5>
                     </div>
                 </div>
                 <div class="row justify-content-center text-center justify-content-lg-start text-lg-start mt-0 pt-0 ms-lg-5">
-                    <div class="col-11 justify-content-center justify-content-lg-start ms-2 mt-4 p-0 mb-0">
+                    <div class="col-11 justify-content-center justify-content-lg-start ms-lg-2 mt-4 p-0 mb-0">
                         <h4 class="white mb-0 mt-0">Contatti</h4>
                         <p class="white montserrat mt-0 mb-0" style="display: inline-block;">+39 3335211918</p>
                         <p class="white montserrat mt-0 mb-2">fisioterapia.magnolia@gmail.com</p>

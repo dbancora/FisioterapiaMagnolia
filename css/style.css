@@ -42,6 +42,14 @@ p.white{
     color: var(--White);
 }
 
+p.black{
+    color: black;
+}
+
+p.bold{
+    font-weight: bold;
+}
+
 p.montserrat{
     font-family: var(--fontMontserrat);
 }
@@ -275,6 +283,21 @@ lo spacing su risoluzioni diverse*/
 }
 
 /* ------------ NAVBAR ------------ */
+
+/*DA RIGUARDARE*/
+@media only screen and (min-width:992px) {
+    .navbar-expand-lg .offcanvas {
+        position: absolute;
+    }
+}
+
+@media only screen and (min-width:992px) { /* Adatta il valore 768px in base alle tue esigenze */
+    #navbar-scritta {
+        text-align: center;
+        display: block;
+    }
+}
+
 
 .navbar-toggler .fa-bars, .navbar a.dropdown-toggle, .navbar .nav-link.active {
     color: var(--White); /* Colore per l'icona hamburger menu */
@@ -552,6 +575,24 @@ lo spacing su risoluzioni diverse*/
 .button-card:active {
      color: var(--PrimaryColor);
  }
+
+.button-date, .btn:active{
+    background-color: var(--PrimaryColor);
+    color: white; /* Colore del testo bianco */
+    border: none; /* Rimuove il bordo predefinito */
+    padding: 15px 32px; /* Spazio intorno al testo */
+    text-align: center; /* Allinea il testo al centro */
+    text-decoration: none; /* Rimuove il sottolineato */
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px; /* Angoli arrotondati */
+}
+
+.button-date:hover, button-date:active{
+    background-color: var(--White);
+    color: var(--PrimaryColor);
+    border: 1px solid var(--PrimaryColor);
+}
 
 /* ------------ BRAND CARD (vision e mission) ------------ */
 
