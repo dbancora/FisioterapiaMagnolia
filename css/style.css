@@ -179,11 +179,11 @@ button:hover, button:active {
 
 /* ------------ HEADER ------------ */
 
-header{
-    background-image: url("../img/Clouds_reduced.png");
+#header_Riabilitazione_Ortopedica{
+    background-image: url("../img/Riabilitazione_ortopedica_base.png");
     background-position: center bottom;
     background-size: cover;
-    height: fit-content;
+    height: 400px;
     position: relative;
 }
 
