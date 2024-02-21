@@ -54,6 +54,10 @@ p.montserrat{
     font-family: var(--fontMontserrat);
 }
 
+p.dic{
+    font-size: 18px;
+}
+
 h1 {
     color: white;
     font-weight: bold;
@@ -85,6 +89,14 @@ h2.montserrat{
 
 h4 {
     font-family: var(--fontNunito);
+}
+
+h4.montserrat{
+    font-family: var(--fontMontserrat);
+}
+
+h4.trenta{
+    font-size: 30px;
 }
 
 h4.white {
@@ -1073,6 +1085,15 @@ footer {
 footer img{
     width: 4.5em;
     height: 4.5em;
+}
+
+
+/* ------------ MAP ------------ */
+@media (max-width: 768px) {
+    .map-container iframe {
+        width: 250px;
+        height: 250px;
+    }
 }
 
 
