@@ -25,6 +25,13 @@ html {
     font-family: var(--fontNunito);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
 a{
     text-decoration: none;
 }
@@ -149,10 +156,6 @@ a.small_copy:hover {
     font-weight: bold;
 }
 
-body {
-    background: var(--White);
-}
-
 /*Icone social presenti nel footer*/
 .fa-brands {
     color: var(--White);
@@ -258,28 +261,7 @@ button:hover, button:active {
 sostituendola con l'svg già utilizzato in altre pagine del sito e assegnando allo stesso il colore identificativo del pacchetto,
 per portare completamente il focus dell'utente sul servizio proposto*/
 
-.color_wave_upsidedown {
-    background-image: none;
-    background-color: var(--TertiaryLightBlue);
-    mask-image: url("../img/svg/Wave_upside_down.svg");
-    mask-position: center bottom;
-    mask-size: cover;
-    fill: var(--TertiaryPink);
-    position: relative;
-    height: 30em;
-}
 
-#adventure_boundle .color_wave_upsidedown {
-    background-color: var(--TertiraryGreen);
-}
-
-#creativity_boundle .color_wave_upsidedown {
-    background-color: var(--TertiaryPink);
-}
-
-#relax_boundle main, #adventure_boundle main, #creativity_boundle main  {
-    margin-top: -15%;
-}
 
 /*Per gestire l'effetto di sovrapposizione tra il pacchetto e l'svg è stato necessario creare una media query per gestire
 lo spacing su risoluzioni diverse*/
@@ -1080,6 +1062,7 @@ input[type=text]:focus, .form-container input[type=password]:focus {
 /* ------------ FOOTER ------------ */
 footer {
     background: var(--PrimaryColor);
+    margin-top: auto;
 }
 
 footer img{
