@@ -36,6 +36,18 @@ a{
     text-decoration: none;
 }
 
+a.montserrat{
+    font-family: var(--fontMontserrat);
+}
+
+a.green{
+    color: var(--PrimaryColor);
+}
+
+a.white{
+    color: white;
+}
+
 h1, h2, h3 {
     font-family: var(--fontLobster);
 
@@ -43,6 +55,10 @@ h1, h2, h3 {
 
 h2, h3, h4, h5, p, li, a{
     color: var(--PrimaryColor);
+}
+
+li.montserrat{
+    font-family: var(--fontMontserrat);
 }
 
 p.white{
@@ -449,12 +465,6 @@ lo spacing su risoluzioni diverse*/
 
 }
 
-.navbar.collapsing .navbar-nav,
-.navbar.show .navbar-nav{
-    background: -moz-linear-gradient(to top,  rgba(12,7,37,1) 0%, rgba(0,0,0,0) 50%);
-    padding: 12px;
-}
-
 #offcanvasNavbar{
     background-color: var(--PrimaryColor);
     text-align: center;
@@ -476,15 +486,6 @@ lo spacing su risoluzioni diverse*/
 }
 
 /* ----------- ONDA SVG ------------ */
-.white-wave{
-    background-image: url("../img/svg/White_wave.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#reviews .white-wave {
-    background-image: url("../img/svg/Wave.svg");
-}
 
 .white-wave .row {
     padding-top: 30%;
@@ -494,14 +495,6 @@ lo spacing su risoluzioni diverse*/
 .white-wave h2, .white-wave p{
     color: var(--PrimaryColor);
 }
-
-.color_wave {
-    mask: url("/img/svg/White_wave.svg");
-    mask-repeat: no-repeat;
-    mask-size: cover;
-    z-index:0;
-}
-
 .color_wave .row {
     padding-top: 70%;
 }
@@ -517,19 +510,6 @@ lo spacing su risoluzioni diverse*/
         padding-bottom: 5%;
     }
 }
-
-#relax_boundle .color_wave {
-    background-color: var(--TertiaryLightBlue);
-}
-
-#adventure_boundle .color_wave {
-    background-color: var(--TertiraryGreen);
-}
-
-#creativity_boundle .color_wave {
-    background-color: var(--TertiaryPink);
-}
-
 
 /* ------------ SERVICE CARD ----------*/
 .service-card{
@@ -892,65 +872,7 @@ input[type=text]:focus, .form-container input[type=password]:focus {
     color: var(--PrimaryColor);
 }
 
-#card_Zyrak {
-    border-right: .3rem solid var(--TertiaryLightBlue);
-    border-bottom: .3rem solid var(--TertiaryLightBlue);
-}
-
-#card_Lumara {
-    border-right: .3rem solid var(--TertiaryPink);
-    border-bottom: .3rem solid var(--TertiaryPink);
-}
-
-#card_Calysa {
-    border-right: .3rem solid var(--TertiraryGreen);
-    border-bottom: .3rem solid var(--TertiraryGreen);
-}
-
-/* ------------ TESTIMONIAL CARD ------------ */
-
-.testimonials-card{
-    width: 20em;
-    height: fit-content;
-    border-radius: 1.5em;
-    background-color: #352688;
-}
-
-.testimonials-card img{
-    width: 2.3rem;
-    height: auto;
-}
-
-.testimonials-card img:not(:last-child){
-    margin-right: 6px;
-}
-
-.testimonials-card .name{
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: var(--White);
-    margin-top: 1.2em;
-}
-
-.testimonials-card p{
-    text-align: center;
-    margin-top: 20px;
-    color: var(--White);
-    font-size: 0.85rem;
-    max-width: 90%;
-}
-
 /* ------------ IMAGE CARD ------------ */
-
-.image-carousel{
-    max-width: 90em;
-}
-.image-card{
-    display: block;
-    width: 50%;
-    height: fit-content;
-    object-fit: cover;
-}
 
 .guide-pagination .swiper-pagination-bullet {
     opacity: 1;
@@ -981,23 +903,6 @@ input[type=text]:focus, .form-container input[type=password]:focus {
     border-radius: 100%;
     border: 2px solid var(--PrimaryColor);
     color: var(--PrimaryColor);
-}
-
-/* fix the buttons positions */
-.swiper-button-prev {
-    left: 0;
-    background-image: url("../img/svg/nav-arrow-left.svg");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center;
-}
-
-.swiper-button-next {
-    right: 0;
-    background-image: url("../img/svg/nav-arrow-right.svg");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center;
 }
 
 /* Modifica la posizione quando la larghezza della finestra supera 1200px */
@@ -1079,5 +984,9 @@ footer img{
     }
 }
 
-
-
+/* ------------ BREADCRUMB ------------ */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: url("../img/Small/Chevron.svg");
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
