@@ -3,6 +3,9 @@
 $(document).ready(function () {
 
     var svgElement = document.getElementById('navbar-logo');
+    var originalSVG = 'img/svg/Pittogramma_green.svg';
+    var newSVG = 'img/svg/Pittogramma_White.svg';
+
     function updateNavbar() {
         if ($(window).width() < 993) { // Mobile
             $(".nav-item a").removeClass('colored');
@@ -12,7 +15,7 @@ $(document).ready(function () {
             $(".navbar").removeClass("nav-transparent").addClass("nav-colored");
             $(".fa-bars").removeClass("colored");
             $('#navbar-scritta').addClass("white");
-            svgElement.style.fill = '#FFFFFF';
+            svgElement.src = newSVG;
             if ($(window).width() >= 975) { // Mobile
                 $(".nav-item a").removeClass('colored');
             }
@@ -20,6 +23,7 @@ $(document).ready(function () {
             $(".navbar").removeClass("nav-colored").addClass("nav-transparent");
             $(".fa-bars").addClass("colored");
             $('#navbar-scritta').removeClass("white");
+            svgElement.src = originalSVG;
             if ($(window).width() >= 975) { // Mobile
                 $(".nav-item a").addClass('colored');
             }
