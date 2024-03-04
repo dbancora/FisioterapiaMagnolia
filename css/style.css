@@ -185,12 +185,37 @@ a.small_copy:hover {
 /* ------------ HEADER ------------ */
 
 #header_Riabilitazione_Ortopedica{
-    background-image: url("../img/Riabilitazione_ortopedica_base.png");
+    background-image: url("../img/Riabilitazione ortopedica.png");
     background-position: center bottom;
     background-size: cover;
     height: 400px;
     position: relative;
 }
+
+#header_Riabilitazione_Neurologica{
+    background-image: url("../img/Riabilitazione neurologica.png");
+    background-position: center bottom;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+#header_Drenaggio_Linfatico_Manuale{
+    background-image: url("../img/Drenaggio linfatico manuale.png");
+    background-position: center bottom;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+#header_Massaggio_Thailandese{
+    background-image: url("../img/Massaggio Tailandese.png");
+    background-position: center bottom;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
 
 #brand_name {
     text-align: center;
@@ -529,6 +554,38 @@ lo spacing su risoluzioni diverse*/
 .button-card:active {
     background-color: var(--PrimaryColor);
  }
+
+.button-back {
+    background-color: transparent;
+    color: var(--PrimaryColor); /* Colore del testo bianco */
+    padding: 15px 32px; /* Spazio intorno al testo */
+    text-align: center; /* Allinea il testo al centro */
+    text-decoration: none; /* Rimuove il sottolineato */
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px; /* Angoli arrotondati */
+    border: 2px solid; /* Modifica la larghezza del bordo */
+    border-color: var(--PrimaryColor); /* Cambia il colore del bordo (sostituisci #ff0000 con il tuo colore desiderato) */
+}
+
+.button-back:hover {
+    background-color: var(--PrimaryColor);
+    color: var(--White);
+}
+
+.button-back:hover::before,
+.button-back:hover::after {
+    content: ''; /* Contenuto vuoto per rendere gli pseudo-elementi visibili */
+    background-color: var(--PrimaryColor);
+    /* Altre proprietà CSS a piacere per personalizzare gli pseudo-elementi */
+}
+
+.button-back:active {
+    background-color: var(--PrimaryColor);
+}
+
+
 
 /*Media query per gestire la diversa disposizione degli elementi su tabelt e desktop*/
 /*Su mobile, l'img del razzo viene posizionato al di sotto del box di testo
