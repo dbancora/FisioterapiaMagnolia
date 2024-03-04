@@ -11,7 +11,7 @@ $(document).ready(function () {
             $(".nav-item a").removeClass('colored');
         }
 
-        if ($(document).scrollTop() > 200) {
+        if ($(document).scrollTop() > 100) {
             $(".navbar").removeClass("nav-transparent").addClass("nav-colored");
             $(".fa-bars").removeClass("colored");
             $('#navbar-scritta').addClass("white");

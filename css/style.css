@@ -48,6 +48,12 @@ a.white{
     color: white;
 }
 
+#navbar-scritta {
+    pointer-events: none;
+    cursor: default;
+}
+
+
 #navbar-scritta:hover, #navbar-scritta:focus {
     color: var(--PrimaryColor); /* Il colore che desideri per l'hover */;
 }
