@@ -284,36 +284,6 @@ a.small_copy:hover {
     text-align: center;
 }
 
-#slogan {
-    position: relative;
-    text-align: center;
-}
-
-#cloud{
-    z-index: 3;
-    margin-top: 5%;
-}
-
-/* ------------ HEADER PAGINE SINGLE BOUNDLE ------------ */
-/*Nelle pagine sei singoli pacchetti si è deciso di rimuovere l'immagine della hero,
-sostituendola con l'svg già utilizzato in altre pagine del sito e assegnando allo stesso il colore identificativo del pacchetto,
-per portare completamente il focus dell'utente sul servizio proposto*/
-
-
-
-/*Per gestire l'effetto di sovrapposizione tra il pacchetto e l'svg è stato necessario creare una media query per gestire
-lo spacing su risoluzioni diverse*/
-
-@media only screen and (min-width: 768px) {
-    .color_wave_upsidedown {
-        height: 35em;
-    }
-
-    #relax_boundle main, #adventure_boundle main, #creativity_boundle main  {
-        margin-top: -8%;
-    }
-}
-
 /* ------------ NAVBAR ------------ */
 
 /*DA RIGUARDARE*/
@@ -492,58 +462,7 @@ lo spacing su risoluzioni diverse*/
     text-align: center;
 }
 
-/* ----------- IMG GROW ON HOVER------------ */
-
-/* Media query per far sì che all'hover da desktop le immagini a cui è applicata la classe img-grow si ingrandiscano*/
-@media(hover: hover) and (pointer: fine) and (min-width: 1200px) {
-    .img-grow:hover{
-        transform: scale(1.1);
-        transition: transform 0.5s ease;
-    }
-
-    .img-grow:not(:hover){
-        transform: scale(1);
-        transition: transform 0.5s ease;
-    }
-}
-
-/* ----------- ONDA SVG ------------ */
-
-.white-wave .row {
-    padding-top: 30%;
-    padding-bottom: 5%;
-}
-
-.white-wave h2, .white-wave p{
-    color: var(--PrimaryColor);
-}
-.color_wave .row {
-    padding-top: 70%;
-}
-
-/*Media query per riposizionare gli elementi della pagina rispetto all'onda ed evitare effetti di mascheramento*/
-@media only screen and (min-width:576px) {
-    .color_wave .row {
-        padding-top: 10%;
-    }
-
-    .white-wave .row {
-        padding-top: 7%;
-        padding-bottom: 5%;
-    }
-}
-
-/* ------------ SERVICE CARD ----------*/
-.service-card{
-    width: auto;
-    height: auto;
-}
-
-.service-card .img{
-    height: 100%;
-    width: 100%;
-    object-fit: fill;
-}
+/* ----------- BUTTON CARD Trattamenti ------------ */
 
 .button-card {
     background-color: rgba(255, 255, 255, 0.3); /* Nero trasparente al 50% */
@@ -571,6 +490,8 @@ lo spacing su risoluzioni diverse*/
 .button-card:active {
     background-color: var(--PrimaryColor);
  }
+
+/* ----------- BUTTON back & next ------------ */
 
 .button-back {
     background-color: transparent;
@@ -602,45 +523,6 @@ lo spacing su risoluzioni diverse*/
     background-color: var(--PrimaryColor);
 }
 
-
-
-/*Media query per gestire la diversa disposizione degli elementi su tabelt e desktop*/
-/*Su mobile, l'img del razzo viene posizionato al di sotto del box di testo
-Su tablet, il razzo affianca il testo, mentre il form rimane posizionato sotto
-Su desktop tutti e tre gli elementi (img, box testo e form) vengono posizionati sulla stessa riga
- */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-    #get_in_touch .travel_boundle {
-        padding: 8% 8% 8% 20%;
-        margin-left: -35%;
-    }
-
-    #get_in_touch img {
-        margin-left: -60%;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    #get_in_touch .travel_boundle {
-        padding: 8% 8% 8% 20%;
-        margin-left: -20%;
-    }
-}
-
-
-@media only screen and (min-width: 1200px) {
-    #get_in_touch form {
-        position: relative;
-        margin-left: -35%;
-        z-index: 2;
-    }
-}
-
-@media only screen and (min-width: 1300px) {
-    #get_in_touch form {
-        margin-left: -65%;
-    }
-}
 
 /* ------------ Effetto fade out per sostituzione elementi in html ------------ */
 #mainContainer {
