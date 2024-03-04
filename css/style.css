@@ -216,6 +216,23 @@ a.small_copy:hover {
     position: relative;
 }
 
+#header_Massaggio_Tuina{
+    background-image: url("../img/Massaggio Tuina.png");
+    background-position: center bottom;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+#header_Tecniche_di_rilassamento{
+    background-image: url("../img/Tecniche di rilassamento.png");
+    background-position: center bottom;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+
 
 #brand_name {
     text-align: center;
