@@ -39,8 +39,16 @@ a.green{
     color: var(--PrimaryColor);
 }
 
+a.semigreen{
+    color: #B1BCB2;
+}
+
 a.white{
     color: white;
+}
+
+a.bold{
+    font-weight: bold;
 }
 
 #navbar-scritta {
@@ -557,6 +565,15 @@ footer img{
 /* ------------ BREADCRUMB ------------ */
 .breadcrumb-item + .breadcrumb-item::before {
     content: url("../img/Small/Chevron.svg");
+    position: relative;
     padding-bottom: 0;
     margin-bottom: 0;
+    display: inline-block;
+    transform: translateY(+12%);
+}
+
+.breadcrumb-item.active{
+    color: var(--PrimaryColor);
+    font-weight: bold;
+    font-family: var(--fontMontserrat);
 }
