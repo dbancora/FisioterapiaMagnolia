@@ -12,11 +12,6 @@
     /* COLORS */
     --White: #EEEDE7;
     --PrimaryColor: #728878;
-    --SecondaryColor: #FFE037;
-    --TertiaryLightBlue: #4C7CF8;
-    --TertiraryGreen: #1DCD9F;
-    --TertiaryPink: #F63A99;
-    --VariantColor: #8090E7;
 }
 
 /* ------------ ASSEGNAZIONE FONTS E COLORI------------ */
@@ -187,25 +182,6 @@ a.small_copy:hover {
     color: var(--White);
 }
 
-/* ------------ CTA ------------ */
-
-button {
-    color: var(--PrimaryColor);
-    background: var(--SecondaryColor);
-    padding: 1.25rem 3.125rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    display: inline-flex;
-    border: none;
-}
-
-button:hover, button:active {
-    background: var(--VariantColor);
-}
-
 /* ------------ HEADER ------------ */
 
 #header_Riabilitazione_Ortopedica{
@@ -269,12 +245,6 @@ button:hover, button:active {
 #slogan {
     position: relative;
     text-align: center;
-}
-
-#button_hero{
-    position: relative;
-    display: block;
-    z-index: 2;
 }
 
 #cloud{
@@ -557,26 +527,11 @@ lo spacing su risoluzioni diverse*/
 }
 
 .button-card:active {
-     color: var(--PrimaryColor);
+    background-color: var(--PrimaryColor);
  }
 
-.button-date, .btn:active{
-    background-color: var(--PrimaryColor);
-    color: white; /* Colore del testo bianco */
-    border: none; /* Rimuove il bordo predefinito */
-    padding: 15px 32px; /* Spazio intorno al testo */
-    text-align: center; /* Allinea il testo al centro */
-    text-decoration: none; /* Rimuove il sottolineato */
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 25px; /* Angoli arrotondati */
-}
 
-.button-date:hover, button-date:active{
-    background-color: var(--White);
-    color: var(--PrimaryColor);
-    border: 1px solid var(--PrimaryColor);
-}
+
 
 /* ------------ BRAND CARD (vision e mission) ------------ */
 
@@ -906,14 +861,6 @@ input[type=text]:focus, .form-container input[type=password]:focus {
     background-color: var(--PrimaryColor);
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    background-color: var(--White);
-    padding: 1.875rem 1.875rem;
-    border-radius: 100%;
-    border: 2px solid var(--PrimaryColor);
-    color: var(--PrimaryColor);
-}
 
 /* Modifica la posizione quando la larghezza della finestra supera 1200px */
 @media (min-width: 1200px) {
