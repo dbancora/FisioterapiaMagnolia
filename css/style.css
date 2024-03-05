@@ -470,10 +470,30 @@ a.small_copy:hover {
     text-align: center;
 }
 
-/* ----------- BUTTON CARD Trattamenti ------------ */
+/* ----------- CARD Trattamenti + BUTTON ------------ */
+.service-card{
+    width: auto;
+    height: auto;
+}
+
+.service-card .img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.card_background_trat{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+}
 
 .button-card {
-    background-color: rgba(255, 255, 255, 0.3); /* Nero trasparente al 50% */
+    background-color: rgba(255, 255, 255, 0.3); /* Nero trasparente al 30% */
     color: white; /* Colore del testo bianco */
     border: none; /* Rimuove il bordo predefinito */
     padding: 15px 32px; /* Spazio intorno al testo */
