@@ -201,7 +201,7 @@ a.small_copy:hover {
 }
 
 #header_Riabilitazione_Neurologica{
-    background-image: url("../img/Riabilitazione neurologica.png");
+    background-image: url("../img/svg/Riabilitazione_neurologica.svg");
     background-position: center bottom;
     background-size: cover;
     height: 400px;
@@ -209,7 +209,7 @@ a.small_copy:hover {
 }
 
 #header_Drenaggio_Linfatico_Manuale{
-    background-image: url("../img/Drenaggio linfatico manuale.png");
+    background-image: url("../img/svg/Drenaggio_linfatico_manuale.svg");
     background-position: center bottom;
     background-size: cover;
     height: 400px;
@@ -217,7 +217,7 @@ a.small_copy:hover {
 }
 
 #header_Massaggio_Thailandese{
-    background-image: url("../img/Massaggio Tailandese.png");
+    background-image: url("../img/svg/Massaggio_Tailandese.svg");
     background-position: center bottom;
     background-size: cover;
     height: 400px;
@@ -225,7 +225,7 @@ a.small_copy:hover {
 }
 
 #header_Massaggio_Tuina{
-    background-image: url("../img/Massaggio Tuina.png");
+    background-image: url("../img/svg/Massaggio_Tuina.svg");
     background-position: center bottom;
     background-size: cover;
     height: 400px;
@@ -233,7 +233,7 @@ a.small_copy:hover {
 }
 
 #header_Tecniche_di_rilassamento{
-    background-image: url("../img/Tecniche di rilassamento.png");
+    background-image: url("../img/svg/Tecniche_di_rilassamento.svg");
     background-position: center bottom;
     background-size: cover;
     height: 400px;
