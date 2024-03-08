@@ -39,6 +39,10 @@ a.green{
     color: var(--PrimaryColor);
 }
 
+a.black{
+    color: black;
+}
+
 a.semigreen{
     color: #B1BCB2;
 }
