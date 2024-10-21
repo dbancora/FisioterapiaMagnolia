@@ -1,2 +1,24 @@
 <?xml version="1.0"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority/></url><url><loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/1.Riabilitazione_Ortopedica.html</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority/></url><url><loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/2.Riabilitazione_Neurologica.html</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority/></url><url><loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/3.Drenaggio_Linfatico_Manuale.html</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority/></url><url><loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/4.Massaggio_Thailandese.html</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority/></url><url><loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/5.Massaggio_Tuina.html</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority/></url><url><loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/6.Tecniche_di_Rilassamento.html</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority/></url><url><loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/index.html</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority/></url><url><loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/index.html#anchor_trattamenti</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority/></url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority>1.0<priority/>
+	</url>
+	<url>
+		<loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/1.Riabilitazione_Ortopedica.html</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/2.Riabilitazione_Neurologica.html</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/3.Drenaggio_Linfatico_Manuale.html</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/4.Massaggio_Thailandese.html</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/5.Massaggio_Tuina.html</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://fisioterapia-magnolia-d9zpz.kinsta.page/6.Tecniche_di_Rilassamento.html</loc><lastmod>2024-05-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+	</url>
+</urlset>
